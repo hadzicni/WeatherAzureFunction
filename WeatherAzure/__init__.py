@@ -22,7 +22,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         )
 
     # API-Key aus Umgebungsvariable lesen (z. B. in Azure hinterlegen)
-    api_key = os.environ.get("OPENWEATHER_API_KEY", "cb8db7cef5d9c6cc4a3079bc4109c793")
+    api_key = os.environ.get("OPENWEATHER_API_KEY", "")
 
     # URL für OpenWeatherMap
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&lang=de&units=metric"
